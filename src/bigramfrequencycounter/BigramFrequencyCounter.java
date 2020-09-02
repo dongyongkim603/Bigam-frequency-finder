@@ -41,9 +41,11 @@ public class BigramFrequencyCounter {
             //will store the unsorted bigrams loaded in from the Control class
             HashMap<String, Integer> unsortedMap = mainControler.getMap();
             sortedMap = mainControler.sortByValue(unsortedMap);
-            int x = 0;
+            int x = 1;
+            
+            //this will print out the 20 most frequent bigrams
             for (Map.Entry<String, Integer> en : sortedMap.entrySet()) {
-                System.out.println("Bigram: \"" + en.getKey()
+                System.out.println("Number " + x + " Bigram: \"" + en.getKey()
                         + "\", Frequency of occurances: " + en.getValue());
                 if (x == 20) {
                     break;
@@ -52,5 +54,4 @@ public class BigramFrequencyCounter {
             }
         }
     }
-
 }
